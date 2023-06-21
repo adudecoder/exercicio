@@ -3,7 +3,7 @@
 /** 
  * @param string|null $param
  * @return string
-*/
+ */
 function site(string $param = null): string
 {
     if ($param && !empty(SITE[$param])) {
@@ -24,16 +24,24 @@ function routeImage(string $imageUrl): string
 
 /**
  * @param string $path
+ * @param bool $time
  * @return string
  */
-function asset(string $path): string
+function asset(string $path, bool $time = true): string
 {
-    return SITE["root"] . "/views/assets/{$path}";
+    $file = SITE["root"] . "/views/assets/{$path}";
+    $fileOnDir = dirname(__DIR__, 1) . "/views/assets/{$path}";
+
+    if ($time && file_exists($fileOnDir)) {
+        $file .= "?time=" . filemtime($fileOnDir);
+    }
+
+    return $file;
 }
 
 function flash(string $type = null, string $message = null): ?string
 {
-    if($type && $message) {
+    if ($type && $message) {
         $_SESSION["flash"] = [
             "type" => $type,
             "message" => $message
@@ -41,7 +49,7 @@ function flash(string $type = null, string $message = null): ?string
         return null;
     }
 
-    if(!empty($_SESSION["flash"]) && $flash = $_SESSION["flash"])  {
+    if (!empty($_SESSION["flash"]) && $flash = $_SESSION["flash"]) {
         unset($_SESSION["flash"]);
         return "<div class=\"message {$flash["type"]}\">{$flash["message"]}</div>";
     }

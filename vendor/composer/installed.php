@@ -3,7 +3,7 @@
         'name' => 'victormartins/authphp',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4d9af4651b756b8fd39f15b2100f428e70f3a91c',
+        'reference' => 'e9cbac2284c5b816aac087cc28a2fb8dec58e5d5',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -202,7 +202,7 @@
         'victormartins/authphp' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4d9af4651b756b8fd39f15b2100f428e70f3a91c',
+            'reference' => 'e9cbac2284c5b816aac087cc28a2fb8dec58e5d5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
