@@ -38,7 +38,6 @@ function flash(string $type = null, string $message = null): ?string
             "type" => $type,
             "message" => $message
         ];
-
         return null;
     }
 
@@ -46,4 +45,5 @@ function flash(string $type = null, string $message = null): ?string
         unset($_SESSION["flash"]);
         return "<div class=\"message {$flash["type"]}\">{$flash["message"]}</div>";
     }
+    return null;
 }

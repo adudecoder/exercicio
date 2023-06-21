@@ -4,12 +4,20 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa
+class ComposerStaticInitf914c5c69aae381bff64587b485895b2
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '5615da22037a0798f486f5688f33cc23' => __DIR__ . '/..' . '/codephix/plates/src/Template/match.php',
+        'd30df192c36d94a9a87664226ef6819e' => __DIR__ . '/..' . '/codephix/plates/src/Extension/Data/data.php',
+        'f8cce34de4de9ef4acc17d1401b44722' => __DIR__ . '/..' . '/codephix/plates/src/Extension/Path/path.php',
+        '351c1fcce2c3c2a40164c85a8557345e' => __DIR__ . '/..' . '/codephix/plates/src/Extension/RenderContext/func.php',
+        '5e54b499504ac9197c2db1ac39db1a36' => __DIR__ . '/..' . '/codephix/plates/src/Extension/RenderContext/render-context.php',
+        '8820aeeedd1a43d7aaf34fb0f7889b79' => __DIR__ . '/..' . '/codephix/plates/src/Extension/LayoutSections/layout-sections.php',
+        '58f3332935180b4c0fbdbd08a09ef95d' => __DIR__ . '/..' . '/codephix/plates/src/Extension/Folders/folders.php',
+        '7533ea047b8fd481a3bacd7fa26eadfb' => __DIR__ . '/..' . '/codephix/plates/src/Util/util.php',
         '504352a0575713b7a7a9475c4954e308' => __DIR__ . '/../..' . '/source/Config.php',
         'f77b2b486c8998404ff908f992bf75c0' => __DIR__ . '/../..' . '/source/Helpers.php',
     );
@@ -77,7 +85,7 @@ class ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa
         ),
         'League\\Plates\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/plates/src',
+            0 => __DIR__ . '/..' . '/codephix/plates/src',
         ),
         'League\\OAuth2\\Client\\' => 
         array (
@@ -118,9 +126,9 @@ class ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfc3a932769b4aa521f2116279b8c6faa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf914c5c69aae381bff64587b485895b2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf914c5c69aae381bff64587b485895b2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf914c5c69aae381bff64587b485895b2::$classMap;
 
         }, null, ClassLoader::class);
     }

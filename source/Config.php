@@ -6,7 +6,8 @@ define("SITE", [
     "desc" => "Aprendendo a construir uma aplicação de autenticação em MVC com PHP",
     "domain" => "localauth.com",
     "locale" => "pt_BR",
-    "root" => "http://localhost/exercicio"
+    //"root" => "http://localhost/exercicio"
+    "root" => "https://www.localhost/exercicio"
 ]);
 
 /** SITE MINIFY */
